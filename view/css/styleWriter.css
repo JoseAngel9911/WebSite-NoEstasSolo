@@ -1,0 +1,48 @@
+
+
+body {
+    font-family: 'Overpass', sans-serif;
+    font-weight: normal;
+    font-size: 100%;
+    color: #000000;
+    text-align: center;
+    
+    margin: 0;
+  background-color: #5d8992;
+}
+#area {
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    
+    text-align: center;
+    width: 100%;
+    
+    padding:150px 350px 350px 350px;
+    box-sizing: border-box;
+}
+#contenido {
+    position:relative;
+     
+      bottom:300px;
+}
+
+@media all and (max-width: 775px)
+{
+   
+  #login {
+        margin: 0 auto;
+    }
+    #area {
+        margin: 0 auto;
+    
+        
+    }
+    .letra{
+        margin: 0 auto;
+        
+    }
+    
+    
+}
+

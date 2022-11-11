@@ -27,9 +27,9 @@
             $_SESSION['userPhone'] = $data['phone'];
             $_SESSION['userPass'] = $data['passwords'];
             $_SESSION['exists'] = true;
-            header('Location: ../view/login.php');
+            header('Location: ../view/privateview/login.php');
         }else{
-            header('Location: ../view/login.php?resp=1');
+            header('Location: ../view/privateview/login.php?resp=1');
         }
     }
 
