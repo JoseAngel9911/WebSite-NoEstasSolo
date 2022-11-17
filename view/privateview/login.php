@@ -20,7 +20,7 @@
 
     function redirection($userTypeP){
         if($userTypeP == 'Administrador'){
-            header('Location: view_administator.php?e=1');
+            header('Location: view_administrator.php?e=1');
         }
         if($userTypeP == 'Escritor'){
             header('Location: view_writer.php');
@@ -44,35 +44,32 @@
 <body>
     <div id="contenedor">
         <div id="login">
-    <header>
-        <h1 div ="titulo">No estas solo</h1>
-    </header>
-    <div><?php echo message($response, $exists, $userType)?></div>
-    <article>
-        <section>
-            <div><?php if(isset($_SESSION['userName'])){ echo $_SESSION['userName'];}?></div>
-            <h3>Inicio de Sesion</h3>
-            <div id="loginform">
-            <form method="post" action="../../controller/login_controller.php">
-                <!-- "> -->
-                <div>
-                    <label>Ingrese usuario:</label><br>
-                    <input type="text" name="user">
-                </div>
-                <div>
-                   <label>Contraseña:</label><br>
-                    <input type="password" name="pass">
-                </div>
-                <div>
-                    <p> <br></p>
-                    <input type="submit" value="Entrar">
-                    <input type="reset" value="Limpiar" name="limpiar">
-                </div>
-            </div>
+            <header>
+                <h1 div ="titulo">No estas solo</h1>
+            </header>
+            <div><?php echo message($response, $exists, $userType)?></div>
+            <article>
+                <section>
+                    <div><?php if(isset($_SESSION['userName'])){ echo $_SESSION['userName'];}?></div>
+                    <h3>Inicio de Sesion</h3>
+                    <div id="loginform">
+                    <form method="post" action="../../controller/login_controller.php">
+                        <div>
+                            <label>Ingrese usuario:</label><br>
+                            <input type="text" name="user">
+                        </div>
+                        <div>
+                        <label>Contraseña:</label><br>
+                            <input type="password" name="pass">
+                        </div>
+                        <div>
+                            <input type="submit" value="Entrar">
+                            <input type="reset" value="Limpiar" name="limpiar">
+                        </div>
+                    </form>
+                </section>        
+            </article>
         </div>
     </div>
-            </form>
-        </section>        
-    </article>
 </body>
 </html>
