@@ -14,10 +14,10 @@
     createSesion($isLogged);
 
     function createSesion($isLog){
-        echo 'Estoy aqui';
+        //echo 'Estoy aqui';
         // echo $isLog;
         if($isLog->num_rows == 1){
-            echo 'Dentro del if';
+            //echo 'Dentro del if';
             $data = $isLog->fetch_assoc();
             session_start();
             $_SESSION['userID'] = $data['id'];
