@@ -11,6 +11,9 @@
             if($responseP == 1){
                 return 'No existe usuario en el sistema';
             }
+            if($responseP == 2){
+                return 'Contraseña equivocada';
+            }
         }else{
             redirection($userTypeP);
             // header('Location: view_administator.php');
@@ -45,7 +48,7 @@
     <div id="contenedor">
         <div id="login">
             <header>
-                <h1 div ="titulo">No estas solo</h1>
+                <h1 class="tit" div ="titulo">No estas solo</h1>
             </header>
             <div><?php echo message($response, $exists, $userType)?></div>
             <article>
@@ -55,16 +58,15 @@
                     <div id="loginform">
                     <form method="post" action="../../controller/login_controller.php">
                         <div>
-                            <label>Ingrese usuario:</label><br>
-                            <input type="text" name="user">
+                            <input type="text" name="user" placeholder=" Ingresar usuario" class="inp1">
                         </div>
                         <div>
-                        <label>Contraseña:</label><br>
-                            <input type="password" name="pass">
+                    
+                            <br><input type="password" name="pass" placeholder="Ingresar contraseña" class="inp2">
                         </div>
                         <div>
-                            <input type="submit" value="Entrar">
-                            <input type="reset" value="Limpiar" name="limpiar">
+                            <input type="submit" value="Entrar" class="bt1">
+                            <input type="reset" value="Limpiar" name="limpiar" class="bt2">
                         </div>
                     </form>
                 </section>        

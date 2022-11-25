@@ -11,9 +11,9 @@
 
     $isLogged = $objUsers->checkLogin();
 
-    createSesion($isLogged);
+    createSesion($isLogged, $sPass);
 
-    function createSesion($isLog){
+    function createSesion($isLog, $sPassP){
         //echo 'Estoy aqui';
         // echo $isLog;
         if($isLog->num_rows == 1){
@@ -27,7 +27,13 @@
             $_SESSION['userPhone'] = $data['phone'];
             $_SESSION['userPass'] = $data['passwords'];
             $_SESSION['exists'] = true;
-            header('Location: ../view/privateview/login.php');
+
+            if(password_verify($sPassP, $_SESSION['userPass'])){
+                header('Location: ../view/privateview/login.php');
+            }else{
+                header('Location: ../view/privateview/login.php?resp=2');
+            }
+            // header('Location: ../view/privateview/login.php');
         }else{
             header('Location: ../view/privateview/login.php?resp=1');
         }
