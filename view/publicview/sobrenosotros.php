@@ -4,38 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="View/css/styles3.css">
+    <link rel="stylesheet" href="../css/styles3.css">
     <title>No estás solo</title>
 </head>
 <body>
-    <header class="page-header">
+      <header class="page-header">
         <nav>
-            <a href="index.php"><img class="logo" src="View/images/logo-1.png" alt="logo"></a>
+            <a href="../../index.php"><img class="logo" src="../images/logo-1.png" alt="logo"></a>
           <ul>
-            <li class="item"><a href="index.php">Inicio</a></li>
-            <li class="item"><a href="View/publicview/sobrenosotros.php">¿Quiénes somos?</a></li>
+            <li class="item"><a href="../../index.php">Inicio</a></li>
+            <li class="item"><a href="../publicview/sobrenosotros.php">¿Quiénes somos?</a></li>
             <li class="item"><a href="#">Contacto</a></li>
           </ul>
-          <a class="cta-contact" href="view/privateview/login.php">
-            <button class="cta-contact">Iniciar Sesión</button>
-          </a>
         </nav>
       </header>
-
-
       <main class="main columns">
         <section class="column main-column">
           <a class="article first-article" href="#">
             <figure class="article-image is-4by3">
-              <img src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/1366/posts/26611/attachment/image-01.png" alt="">
+              <img src="../images/image2.png" alt="">
             </figure>
             <div class="article-body">
               <h2 class="article-title">
-                Hello World
+                No estas solo
               </h2>
               <p class="article-content">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros.
+                Es un proyecto que se creo para ayudar a la gente mayor sin familia,<br>
+                    y la pagína web se creara para dar noticias y ser ocupadad por las personas mayores y sus familiares.<br>
+                    Nuestro equipo esta conformado por: 
               </p>
               <footer class="article-info">
                 <span>By Joe Smith</span>
@@ -43,40 +39,18 @@
               </footer>
             </div>
           </a>
-      
-          <div class="columns">
-            <div class="column nested-column">
-              <a class="article" href="#">
-                <figure class="article-image is-16by9">
-                  <img src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/1366/posts/26611/attachment/image-02.png" alt="">
-                </figure>
-                <div class="article-body">
-                  <h2 class="article-title">
-                    Hello World
-                  </h2>
-                  <p class="article-content">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
-                  </p>
-                  <footer class="article-info">
-                    <span>By Joe Smith</span>
-                    <span>42 comments</span>
-                  </footer>
-                </div>
-              </a>
-            </div>
-      
+          
             <div class="column">
               <a class="article" href="#">
                 <figure class="article-image is-16by9">
-                  <img src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/1366/posts/26611/attachment/image-03.png" alt="">
+                  <img src="../images/Doctor.jpg" alt="">
                 </figure>
                 <div class="article-body">
                   <h2 class="article-title">
-                    Hello World
+                    Manuel Monte Alva
                   </h2>
                   <p class="article-content">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                   es el encargado del proyecto
                   </p>
                   <footer class="article-info">
                     <span>By Joe Smith</span>
@@ -85,26 +59,15 @@
                 </div>
               </a>
               <a class="article" href="#">
+                <figure class="article-image is-16by9">
+                  <img src="../images/Enfermera.jpg" alt="">
+                </figure>
                 <div class="article-body">
                   <h2 class="article-title">
-                    Hello World
+                    Elena Mendes Garcia
                   </h2>
                   <p class="article-content">
-                    Lorem ipsum dolor sit amet.
-                  </p>
-                  <footer class="article-info">
-                    <span>By Joe Smith</span>
-                    <span>42 comments</span>
-                  </footer>
-                </div>
-              </a>
-              <a class="article" href="#">
-                <div class="article-body">
-                  <h2 class="article-title">
-                    Hello World
-                  </h2>
-                  <p class="article-content">
-                    Lorem ipsum dolor sit amet feugiat facilisis.
+                    Especialista en la nutricion y cardio del adulto mayor
                   </p>
                   <footer class="article-info">
                     <span>By Joe Smith</span>
@@ -115,7 +78,7 @@
             </div>
           </div>
         </section>
-      
+        
         <section class="column">
           <a class="article" href="#">
             <figure class="article-image is-3by2">
@@ -236,3 +199,15 @@
   </section>
 </footer>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+

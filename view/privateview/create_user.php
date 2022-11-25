@@ -1,5 +1,5 @@
 <?php
-
+    require '../../controller/user_list_controller.php';
 
     function message(){
         if(isset($_GET['e'])){
@@ -22,15 +22,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crear Usuario</title>
-    <link rel="stylesheet" type="text/css" href="../css/estilos.css">
+    <link rel="stylesheet" type="text/css" href="../css/style_view_admin.css">
+    <link rel="stylesheet" type="text/css" href="../css/style_table_users.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 </head>
 <body>
     <ul class="menu">
-        <li><a href="view_administrator.php">Inicio</a></li>
+        <li><a href="./view_administrator.php">Inicio</a></li>
         <li><a href="#">Editar Sitio</a></li>
         <li><a href="./create_user.php">Crear Usuario</a></li>
-        <li><a href="./user_list.php">Lista de Usuarios</a></li>
+        <!-- <li><a href="./user_list.php">Lista de Usuarios</a></li> -->
     </ul>
 
     <div class="user_new">
@@ -42,6 +43,8 @@
                 <form action="../../controller/create_user_controller.php" method="POST">
                     <input type="text" class="form-control mb-3" name="name" placeholder="Nombres">
                     <input type="text" class="form-control mb-3" name="lastname" placeholder="Apellidos">
+                    <input type="text" class="form-control mb-3" name="account" placeholder="Cuenta usuario">
+                    <input type="text" class="form-control mb-3" name="password" placeholder="Contraseña">
                     <input type="text" class="form-control mb-3" name="phone" placeholder="Telefono">
                         <label>Tipo de Usuario</label> 
                         <select name="type_user">
@@ -57,6 +60,14 @@
             </div>
         </div>
     </div>
+    </div>
+
+    <div class="table_container">
+
+        <?php
+            GenerarTabla();
+        ?>
+
     </div>
     
 </body>
