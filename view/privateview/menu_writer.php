@@ -1,6 +1,10 @@
 <?php
+  session_start();
+    $exists = isset($_SESSION['exists']) ? $_SESSION['exists'] : false;
 
-
+    if($exists == false){
+		header('Location: ../privateview/login.php');
+	}
 ?>
 <!DOCTYPE html>
 <html lang="en">

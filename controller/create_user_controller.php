@@ -29,8 +29,10 @@
 
         $sPassCrip = password_hash($sPassword, PASSWORD_DEFAULT, [15]);
 
+        $sAccountComplete = $sAccount . $finalAccount;
+
         $objUser = new Users;
-        $response = $objUser->registerUser($sName,$sLastName,$sAccount,$iTypeUser,$sPhone,$sPassCrip);
+        $response = $objUser->registerUser($sName,$sLastName,$sAccountComplete,$iTypeUser,$sPhone,$sPassCrip);
 
         // echo $sPassCrip;
 

@@ -42,9 +42,9 @@
         }
 
         public function selectUsersComplete(){
-            //$sCrud = "SELECT users.id, users.name_user, users.lastname_user, users.users_accounts, users.phone, type_users.type_user FROM users INNER JOIN type_users ON users.type_user = type_users.id'";
+            $sCrud = "SELECT users.name_user, users.lastname_user, users.users_accounts, users.phone, type_users.type_user FROM users INNER JOIN type_users ON users.type_user = type_users.id";
 
-            $sCrud = "SELECT * FROM users";
+            // $sCrud = "SELECT * FROM users";
 
             $objConnect = $this->generatedConnection();
 

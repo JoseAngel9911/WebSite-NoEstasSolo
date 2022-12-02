@@ -1,7 +1,7 @@
 <?php
+    session_start();
 
     $response = isset($_GET['resp']) ? $_GET['resp'] : '';
-    session_start();
     $exists = isset($_SESSION['exists']) ? $_SESSION['exists'] : false;
     $userType = isset($_SESSION['userType']) ? $_SESSION['userType'] : '';
 
@@ -48,7 +48,7 @@
     <div id="contenedor">
         <div id="login">
             <header>
-                <h1 class="tit" div ="titulo">No estas solo</h1>
+                 <a href="../../index.php"><img class="logo" src="../images/logo-1.png" alt="logo" width="220" height="100"></a>
             </header>
             <div><?php echo message($response, $exists, $userType)?></div>
             <article>
