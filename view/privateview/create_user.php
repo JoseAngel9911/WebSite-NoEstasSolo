@@ -1,5 +1,12 @@
 <?php
+    session_start();
     require '../../controller/user_list_controller.php';
+
+    $exists = isset($_SESSION['exists']) ? $_SESSION['exists'] : false;
+
+    if($exists == false){
+		header('Location: ../privateview/login.php');
+	}
 
     function message(){
         if(isset($_GET['e'])){
@@ -29,8 +36,9 @@
 <body>
     <ul class="menu">
         <li><a href="./view_administrator.php">Inicio</a></li>
-        <li><a href="#">Editar Sitio</a></li>
+        <!-- <li><a href="#">Editar Sitio</a></li> -->
         <li><a href="./create_user.php">Crear Usuario</a></li>
+        <li><a href="../../controller/close_session.php">Salir</a></li>
         <!-- <li><a href="./user_list.php">Lista de Usuarios</a></li> -->
     </ul>
 
@@ -41,11 +49,12 @@
                 <h2>Nuevo Usuario</h2>
                 <div><?php if(isset($_GET['e'])){echo message();}?></div>
                 <form action="../../controller/create_user_controller.php" method="POST">
-                    <input type="text" class="form-control mb-3" name="name" placeholder="Nombres">
-                    <input type="text" class="form-control mb-3" name="lastname" placeholder="Apellidos">
-                    <input type="text" class="form-control mb-3" name="account" placeholder="Cuenta usuario">
-                    <input type="text" class="form-control mb-3" name="password" placeholder="Contraseña">
-                    <input type="text" class="form-control mb-3" name="phone" placeholder="Telefono">
+                    <input type="text" class="form-control mb-3" name="name" placeholder="Nombres" required>
+                    <input type="text" class="form-control mb-3" name="lastname" placeholder="Apellidos" required>
+                    <input type="text" class="form-control mb-3" name="account" placeholder="Cuenta usuario" required><span>@nosolo.cl</span>
+                    <!-- pattern="^[a-zA-Z0-9.]*$" oninvalid="setCustomValidity('Solo letras (a-z A-Z), numeros(0-9) y punto (.)')" required><span>@nosolo.cl</span> -->
+                    <input type="text" class="form-control mb-3" name="password" placeholder="Contraseña" required>
+                    <input type="text" class="form-control mb-3" name="phone" placeholder="Telefono" required>
                         <label>Tipo de Usuario</label> 
                         <select name="type_user">
                             <optgroup label="Tipo de Usuario">

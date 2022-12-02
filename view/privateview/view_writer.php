@@ -11,6 +11,13 @@
     //echo $_SESSION['userID']. '<br>' .$_SESSION['userName'] . '<br>' . $_SESSION['userAccount'] . '<br>' . $_SESSION['userType']. '<br>' .$_SESSION['userPhone'] . '<br>' . $_SESSION['userPass'];
     
     // echo $iAutor;
+
+    $exists = isset($_SESSION['exists']) ? $_SESSION['exists'] : false;
+
+    if($exists == false){
+		header('Location: ../privateview/login.php');
+	}
+
     $response = isset($_GET['e']) ? $_GET['e'] : '';
 
     function messageInsert($responseP){
@@ -32,7 +39,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Escritor</title>
-    <link rel="stylesheet" href="css/styleMenuW.css" />
+    <link rel="stylesheet" href="../css/styleWriter.css" />
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <script src="../../implements/ckeditor5/ckeditor.js" ></script>
@@ -46,7 +53,8 @@
         
           <h1 >No estas solo</h1>
           <li><a class="active" href="view_writer.php">Escribir noticia</a></li>
-          <li><a href="view_edit_N.php">editar noticia</a></li>
+          <li><a href="view_edit.php">Editar noticia</a></li>
+          <li><a href="../../controller/close_session.php">Salir</a></li>
 
         </ul>
     </nav>
@@ -89,9 +97,9 @@
                     <div>
                         <input type="submit" name='subir' value="Subir">
                     </div>
-                    <div>
+                    <!-- <div>
                         <a href="../../controller/close_session.php">Salir</a>
-                    </div>
+                    </div> -->
                 </form>
             </section>
         </article>

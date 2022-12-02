@@ -1,3 +1,12 @@
+<?php
+    session_start();
+    $exists = isset($_SESSION['exists']) ? $_SESSION['exists'] : false;
+
+    if($exists == false){
+		header('Location: ../privateview/login.php');
+	}
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -12,13 +21,14 @@
 <body>
     <ul class="menu">
         <li><a href="view_administrator.php">Inicio</a></li>
-        <li><a href="#">Editar Sitio</a></li>
+        <!-- <li><a href="#">Editar Sitio</a></li> -->
         <li><a href="./create_user.php">Crear Usuario</a></li>
+        <li><a href="../../controller/close_session.php">Salir</a></li>
         <!-- <li><a href="./user_list.php">Lista de Usuarios</a></li> -->
     </ul>
     
-    <div>
+    <!-- <div>
         <a href="../../controller/close_session.php">Salir</a>
-    </div>    
+    </div>     -->
 </body>
 </html>

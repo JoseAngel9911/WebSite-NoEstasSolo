@@ -1,20 +1,80 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap');
-html {
+.nav{
     background: lightblue;
-    font-family: sans-serif;
-    font-size: 14px;
-  }
+}
+.lo{
 
-nav{
-    background: lightblue; 
-}
-ul{
-    background-color: white;
+    position: relative;
+    width: 650px;
+    height: auto;
+    left: 20px;
+    top: 200px;
+    
+
 }
 
-article{
-    background: lightblue; 
+.bt1{
+
+    position: absolute;
+    top: 410px;
+    width: 100px;
 }
+
+
+#sub, #filas{
+
+    border: 1px red solid;
+}
+#tabla{
+
+    position:relative;
+
+    left: 860px;
+    top: 105px;
+   background-color: lightblue;
+   border:1p white;
+    width: 500px;
+    height: 300px;
+   
+}
+
+#titulo{    
+
+
+    position: relative;
+    top: 130px;
+    left: -550px;
+    height: 30px;
+
+}
+#articulo{    
+
+
+    position: relative;
+    top: 100px;
+    left: -340px;
+    height: 30px;
+
+}
+
+#editor{
+    resize: none;
+    position: absolute;
+    left: 0;
+    top: -100px;
+    width: 750px;
+    height: 500px;
+}
+
+
+#b1{
+
+    position: relative;
+    top: -50px;
+    left: -300px;
+}
+
+
+
 body {
     font-family:  sans-serif, 'Overpass';
     font-weight: normal;
@@ -23,7 +83,7 @@ body {
     text-align: center;
     
     margin: 0;
-    background: lightblue;
+   
 }
 .menu{
 	/*list-style: none;
@@ -38,7 +98,7 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(243, 242, 242);
+    background-color:aliceblue;
     padding: 0px 20px;
     box-shadow: 0px 0px 20px 0px rgb(138, 136, 136);
 
@@ -79,28 +139,10 @@ body {
     padding:150px 350px 350px 350px;
     box-sizing: border-box;
 }
-#contenido {
-    position:relative;
-     
-      bottom:300px;
-}
 
-@media all and (max-width: 775px)
-{
-   
-  #login {
-        margin: 0 auto;
-    }
-    #area {
-        margin: 0 auto;
-    
-        
-    }
-    .letra{
-        margin: 0 auto;
-        
-    }
-    
-    
+
+#sub{
+
+    background-color: white;
 }
 
