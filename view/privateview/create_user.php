@@ -16,6 +16,8 @@
                 return 'Problemas para ingresar usuario';
             }else if($_GET['e'] == 3){
                 return 'No se pudo conectar a la base de datos';
+            }else if($_GET['e'] == 4){
+                return 'Usuario ya existe';
             }
         }
     }
@@ -51,7 +53,7 @@
                 <form action="../../controller/create_user_controller.php" method="POST">
                     <input type="text" class="form-control mb-3" name="name" placeholder="Nombres" required>
                     <input type="text" class="form-control mb-3" name="lastname" placeholder="Apellidos" required>
-                    <input type="text" class="form-control mb-3" name="account" placeholder="Cuenta usuario" required><span>@nosolo.cl</span>
+                    <input type="text" class="form-control mb-3" name="account" placeholder="Cuenta usuario" required><span>@nesolo.cl</span>
                     <!-- pattern="^[a-zA-Z0-9.]*$" oninvalid="setCustomValidity('Solo letras (a-z A-Z), numeros(0-9) y punto (.)')" required><span>@nosolo.cl</span> -->
                     <input type="text" class="form-control mb-3" name="password" placeholder="Contraseña" required>
                     <input type="text" class="form-control mb-3" name="phone" placeholder="Telefono" required>

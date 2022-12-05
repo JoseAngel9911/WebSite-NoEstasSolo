@@ -16,7 +16,7 @@
         $sDate = date('Y/m/d');
 
         $objEditor = new Editor;
-        $response = $objEditor->addNotice($sTitle,$sContent,$sDate,$iAutor,$iTag,$newRute);
+        $response = $objEditor->addNotice($sTitle,$sContent,$sDate,$iAutor,$iTag,$newName);
 
 
         if($response == 1){
