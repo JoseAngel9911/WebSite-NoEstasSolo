@@ -1,19 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap');
 html {
-    background: lightblue;
+    background: white;
     font-family: sans-serif;
     font-size: 14px;
   }
 
 nav{
-    background: lightblue; 
+    background: white; 
 }
 ul{
     background-color: white;
 }
 
 article{
-    background: lightblue; 
+    background: white; 
 }
 body {
     font-family:  sans-serif, 'Overpass';
@@ -23,7 +23,7 @@ body {
     text-align: center;
     
     margin: 0;
-    background: lightblue;
+    background: white;
 }
 .menu{
 	/*list-style: none;

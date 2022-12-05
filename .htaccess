@@ -1,0 +1,4 @@
+ErrorDocument 404 https://localhost/WebSite-NoEstasSolo/view/privateview/error.php
+
+
+

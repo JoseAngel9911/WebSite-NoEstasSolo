@@ -1,38 +1,40 @@
 <?php
-    session_start();
+require('../../controller/listEditController.php');
+?>
+<?php
+session_start();
+//$titulo= 'Titulo ';
 
-    $exists = isset($_SESSION['exists']) ? $_SESSION['exists'] : false;
-
-    if($exists == false){
-		header('Location: ../privateview/login.php');
-	}
-    //$titulo= 'Titulo ';
-
-    // $nameUser = isset($_SESSION['userName']) ? $_SESSION['userName'] : 'NOMBRE_USER';
+// $nameUser = isset($_SESSION['userName']) ? $_SESSION['userName'] : 'NOMBRE_USER';
 
 
-    //require '../controller/writer_controller.php';    
-    
-    // echo $sTitle . '<br>' . $iTag . '<br>' . $sContent. '<br>' .$_SESSION['userID'] . '<br>' . $sDate;
-    //echo $_SESSION['userID']. '<br>' .$_SESSION['userName'] . '<br>' . $_SESSION['userAccount'] . '<br>' . $_SESSION['userType']. '<br>' .$_SESSION['userPhone'] . '<br>' . $_SESSION['userPass'];
-    
-    // echo $iAutor;
-    $response = isset($_GET['e']) ? $_GET['e'] : '';
+//require '../controller/writer_controller.php';    
 
-    function messageInsert($responseP){
-        if($responseP == 1){
-            return 'Se registro la noticia correctamente';
-        }else if($responseP == 2){
-            return 'No se registro la noticia correctamente';
-        }else if($responseP == 3){
-            return 'No se pudo registrar la noticia';
-        }
+// echo $sTitle . '<br>' . $iTag . '<br>' . $sContent. '<br>' .$_SESSION['userID'] . '<br>' . $sDate;
+//echo $_SESSION['userID']. '<br>' .$_SESSION['userName'] . '<br>' . $_SESSION['userAccount'] . '<br>' . $_SESSION['userType']. '<br>' .$_SESSION['userPhone'] . '<br>' . $_SESSION['userPass'];
+
+// echo $iAutor;
+
+$exists = isset($_SESSION['exists']) ? $_SESSION['exists'] : false;
+
+if ($exists == false) {
+    header('Location: ../privateview/login.php');
+}
+
+$response = isset($_GET['e']) ? $_GET['e'] : '';
+
+function messageInsert($responseP)
+{
+    if ($responseP == 1) {
+        return 'Se registro la noticia correctamente';
+    } else if ($responseP == 2) {
+        return 'No se registro la noticia correctamente';
+    } else if ($responseP == 3) {
+        return 'No se pudo registrar la noticia';
     }
-
-    
+}
 
 ?>
-
 <!DOCTYPE html>
 <html lang="es">
 
@@ -43,82 +45,82 @@
     <title>Escritor</title>
 
     <script src="../../implements/ckeditor5/ckeditor.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="../css/edit.css" rel="stylesheet" type="text/css">
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+
+
 
 </head>
 
 <body>
+
     <nav class="nav">
         <ul class="menu">
 
             <h1>No estas solo</h1>
-            <li><a class="view_writer.php" href="view_writer.php">Escribir noticia</a></li>
-            <li><a href="#">Editar noticia</a></li>
+            <li><a class="active" href="view_writer.php">Escribir noticia</a></li>
+            <li><a href="">Editar noticia</a></li>
             <li><a href="../../controller/close_session.php">Salir</a></li>
 
         </ul>
     </nav>
 
+    <section>
 
-    <form id="formulario">
+        <h1>Editar Noticia</h1>
 
-                       
-        <input type="hidden" id="idUpdate">
-        <input type="text" id="titulo" placeholder="titulo"><br>
-        
-        <select name="box-content" id="articulo">
-        <option label="Tipo de Contenido">
-            <option value="Noticia">Noticia</option>
-            <option value="Aviso">Aviso</option>
-        </option>
+        <label>Autor: </label> <label><?php echo $_SESSION['userName'] ?></label>
 
-        </select>
-          
-       
+        <table>
+            <thead>
+                <tr>
+                    <td>autor</td>
+                    <td>titulo</td>
+                    <td>tipo de texto</td>
+                    <td>fecha de publicacion</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <?php while ($row =  $result->fetch_assoc()) { ?>
 
-        <br><label>Autor:</label> <label><?php echo $_SESSION['userName'] ?></label>
-        <div class="lo">
+                        <div id="sexo" style="background-color:black ;">
 
-            <textarea name="content" id="editor" class="edit"></textarea>
-            <input type="submit" class="bt1" value="actualizar" id="bt1">
+                            <td><?php echo $row['name_user']; ?></td>
+                            <td><?php echo $row['title']; ?></td>
+                            <td><?php echo  $row['type_Article']; ?></td>
+                            <td><?php echo  $row['date_register']; ?></td>
+                            <td> <?php echo "<a href='edit_view.php?id=$row[id_Article]&controll=true'>Editar</a>"; ?></td>
+                            <style>
+                                #link:hover {
 
-            <!--<div >
-                        <ul class="menu">
-                    <li><a href="../../controller/close_session.php">Salir</a></li>
-                        </ul> -->
-        </div>
-    </form>
+                                    background-color: cadetblue;
 
-    <table id="tabla">
-        <thead>
-            <tr id="filas">
-               
-                <td>Titulo</td>
-                <td>tipo de articulo</td>
-                <td>fecha de registro</td>
-            </tr>
-        </thead>
+                                }
+                            </style>
+                </tr>
+            </tbody>
 
-        <tbody id="contenido-tabla">
-        </tbody>
-    </table>
+        <?php } ?>
+        </table>
 
+    </section>
 
-    <!-- <script type="text/javascript">
-                            ClassicEditor
-                            .create( document.querySelector('#editor'))
-                            .catch( error => {
-                            console.error( error );
-                            });
-                     </script> -->
-
-
-
-    <script src="../js/edit.js"></script>
 
 </body>
 
 </html>
+
+<?php
+
+$msm = $_GET['msm'] ?? false;
+$id = $_GET['id_ac'] ?? false;
+if ($msm == true) {
+
+    echo "la base de datos ha sido actualizada";
+    echo " <p id_ac=$id id='parrafo'></p>";
+
+?>
+
+<?php } ?>

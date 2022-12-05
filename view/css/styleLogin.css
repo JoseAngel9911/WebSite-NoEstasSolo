@@ -1,13 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@500&display=swap');
+
 /* efectos por defecto */
 body {
-  font-family: "Overpass", sans-serif;
+  font-family: "Montserrat";
   font-weight: normal;
-  font-size: 100%;
+  font-size: medium;
   color: #171a1b;
   text-align: center;
 
   margin: 0;
-  background-color: #719192;
+  background-color: #e4c83bee;
 }
 /* efectos para el contenedor de pantalla completa */
 #contenedor {
@@ -34,15 +37,15 @@ body {
   max-width: 320px;
   min-width: 320px;
   padding: 30px 30px 50px 30px;
-  background-color: rgb(158, 193, 205);
+  background-color: #f7f5f5;
   height: 500px;
   -webkit-box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.15);
   -moz-box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.15);
   box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.15);
 
-  border-radius: 3px 3px 3px 3px;
-  -moz-border-radius: 3px 3px 3px 3px;
-  -webkit-border-radius: 3px 3px 3px 3px;
+  border-radius: 15px;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
 
   box-sizing: border-box;
 
@@ -52,18 +55,18 @@ body {
 
 #login label {
   display: block;
-  font-family: "Overpass", sans-serif;
+  font-family: "Lexend Deca";
   font-size: 120%;
   color: #020303;
-
   margin-top: 15px;
 }
 
 #login input {
-  font-family: "Overpass", sans-serif;
+  font-family: "Montserrat";
   font-size: 110%;
-  color: #040404;
+  text-align: center;
 }
+
 #derecho {
   /*display: flex;
     align-items:center;
@@ -81,7 +84,7 @@ body {
 
 .titulo {
   font-size: 300%;
-  color: #dfcdc3;
+  color: #dfc3c3;
 }
 
 /* seccion de la derecha */
@@ -103,40 +106,56 @@ body {
 .bt2,
 .bt1 {
   position: relative;
-  background-color: rgb(160, 175, 201);
+  background-color: #1663c7;
+  color: whitesmoke;
   top: 20px;
   width: 200px;
   height: 30px;
   margin: 5px;
-
-  border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
+  border: none;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  transition: 0.3s;
 }
 
 .bt1:hover {
-  background-color: rgb(200, 215, 237);
+  background-color: #00c3ff;
+  transform: scale(1.05);
 }
 .bt2:hover {
-  background-color: rgb(200, 215, 237);
+  background-color: #00c3ff;
+  transform: scale(1.05);
 }
 
 #loginform {
   position: relative;
-  top: 90px;
+  top: 30px;
 }
 
 .inp1,
 .inp2 {
   width: 250px;
   height: 35px;
-  border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
+  border: none;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  transition: 0.3s;
+}
+
+.inp1:hover {
+  border: #00c3ff;
+  transform: scale(1.075);
+}
+
+.inp2:hover {
+  border: #00c3ff;
+  transform: scale(1.075);
 }
 
 .in {

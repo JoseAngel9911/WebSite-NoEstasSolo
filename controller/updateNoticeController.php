@@ -7,38 +7,20 @@ $objConection = $objC->setConnect();
 
 $objEdit = new edit;
 
-$id = $_POST['id'] ?? '';
-$titulo = $_POST['titulo'] ?? '';
-$editor = $_POST['editor'] ?? '';
-$articulo = $_POST['articulo'] ?? '';
-
-if($titulo == '' || $editor == '' || $articulo== '' || $id==''){
-
-    echo "no debe haber ningun dato vacio";
-    die();
-
-}
+$title = $_POST['title'] ?? false;
+$content = $_POST['content'] ?? false;
+$type = $_POST['type'] ?? false;
+$id = $_POST['id'] ?? false;
+$fechaActualizada = date('d/m/y');
 
 
-if($articulo=='Aviso'){
-    
-    $typeArticulo=2;
+$objEdit->update($objConection, $id, $title, $content, $type, $fechaActualizada);
 
-}
-if($articulo=='Noticia'){
-    
-    $typeArticulo=1;
 
-}
-
-$resultado=$objEdit->update($objConection, $id, $titulo, $editor, $typeArticulo);
-echo  "se ha actualizado";
-die();
+header("Location:  ../view/privateview/view_edit.php?msm=true&id_ac=$id");
 
 
 
- 
-echo "fallido"; 
 
 
 
