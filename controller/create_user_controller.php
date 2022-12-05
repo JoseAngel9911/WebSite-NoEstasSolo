@@ -29,10 +29,18 @@
 
         $sPassCrip = password_hash($sPassword, PASSWORD_DEFAULT, [15]);
 
-        $sAccountComplete = $sAccount . $finalAccount;
+        $sAccountComplete = $sAccount; // . $finalAccount;
 
-        $objUser = new Users;
-        $response = $objUser->registerUser($sName,$sLastName,$sAccountComplete,$iTypeUser,$sPhone,$sPassCrip);
+        $objCrudVerify = new CrudUsers;
+        $accountBD = $objCrudVerify->verifyUserExists($sAccount);
+        $response = $accountBD->fetch_assoc();
+        // echo $response['users_accounts'];
+        if($response['users_accounts'] == $sAccount){
+            header('Location: ../view/privateview/create_user.php?e=4');
+        }else{
+            $objUser = new Users;
+            $response = $objUser->registerUser($sName,$sLastName,$sAccountComplete,$iTypeUser,$sPhone,$sPassCrip);
+        }
 
         // echo $sPassCrip;
 
