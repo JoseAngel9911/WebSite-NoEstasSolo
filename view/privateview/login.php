@@ -12,7 +12,7 @@
                 return 'No existe usuario en el sistema';
             }
             if($responseP == 2){
-                return 'Contraseña equivocada';
+                return 'Clave equivocada';
             }
         }else{
             redirection($userTypeP);
@@ -50,7 +50,7 @@
             <header>
                  <a href="../../index.php"><img class="logo" src="../images/logo-1.png" alt="logo" width="220" height="100"></a>
             </header>
-            <div><?php echo message($response, $exists, $userType)?></div>
+            <!-- <div><?php echo message($response, $exists, $userType)?></div> -->
             <article>
                 <section>
                     <div><?php if(isset($_SESSION['userName'])){ echo $_SESSION['userName'];}?></div>
