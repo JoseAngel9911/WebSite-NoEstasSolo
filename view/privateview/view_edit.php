@@ -46,6 +46,7 @@ function messageInsert($responseP)
 
     <script src="../../implements/ckeditor5/ckeditor.js"></script>
     <link href="../css/edit.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="../css/loading.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
 
@@ -54,7 +55,8 @@ function messageInsert($responseP)
 </head>
 
 <body>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+                    <div class="loader-page"></div>
     <nav class="nav">
         <ul class="menu">
 
@@ -83,6 +85,7 @@ function messageInsert($responseP)
             </thead>
             <tbody>
                 <tr>
+                    
                     <?php while ($row =  $result->fetch_assoc()) { ?>
 
                         <div id="sexo" style="background-color:black ;">
@@ -107,7 +110,8 @@ function messageInsert($responseP)
 
     </section>
 
-
+    <script src="../js/loader.js"></script> 
+<script src="../js/ckedit.js"></script>
 </body>
 
 </html>
@@ -116,6 +120,8 @@ function messageInsert($responseP)
 
 $msm = $_GET['msm'] ?? false;
 $id = $_GET['id_ac'] ?? false;
+
+
 if ($msm == true) {
 
     echo "la base de datos ha sido actualizada";

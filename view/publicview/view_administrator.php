@@ -6,10 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Administrador</title>
     <link rel="stylesheet" type="text/css" href="styleAdmin.css">
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
 </head>
 <body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+                    <div class="loader-page"></div>
     <ul class="menu">
         <li><a href="view_administrator.php">Inicio</a></li>
         <!-- <li><a href="#">Editar Sitio</a></li> -->
@@ -21,5 +24,6 @@
     <!-- <div>
         <a href="../../controller/close_session.php">Salir</a>
     </div>     -->
+    
 </body>
 </html>
