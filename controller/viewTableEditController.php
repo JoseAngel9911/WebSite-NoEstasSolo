@@ -1,6 +1,6 @@
 <?php
-require('../../model/connection.php');
-require('../../model/editModel.php');
+require('../model/connection.php');
+require('../model/editModel.php');
 
 
   $id = $_GET['id'] ?? false;

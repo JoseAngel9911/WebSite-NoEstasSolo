@@ -13,14 +13,15 @@ class edit
             $query = "SELECT id_Article, title, name_user, type_Article,date_register, article_content, image_rute FROM register_article AS r
             JOIN users AS u  ON r.type_a = u.id
             JOIN type_article AS t  ON r.type_a = t.id_type WHERE id_article = '$id'";
-            $result = $objConection->query($query);
+           
+           $result = $objConection->query($query);
 
         }
         else{
+
             $query = "SELECT id_Article, title, name_user, type_Article,date_register, article_content FROM register_article AS r
             JOIN users AS u  ON r.type_a = u.id
             JOIN type_article AS t  ON r.type_a = t.id_type";
-
             $result = $objConection->query($query);
         }
 
