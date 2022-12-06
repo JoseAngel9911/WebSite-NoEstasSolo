@@ -62,7 +62,11 @@
                         </div>
                         <div>
                     
-                            <br><input type="password" name="pass" placeholder="Ingresar contraseña" class="inp2">
+                            <br><input type="password" name="pass" placeholder="Ingresar contraseña" class="inp2" id="pass">
+
+                            <p>Mostrar contraseña</p>
+                            <input type="checkbox" id="mm" style="position:absolute; width:17px; height:17px; left:20px; bottom:95px;">
+
                         </div>
                         <div>
                             <input type="submit" value="Entrar" class="bt1">
@@ -73,5 +77,11 @@
             </article>
         </div>
     </div>
+
+    <script src="../js/edit.js">
+
+
+
+    </script>
 </body>
 </html>

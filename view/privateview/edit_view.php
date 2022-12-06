@@ -1,5 +1,6 @@
 <?php
 require('../../controller/viewTableEditController.php');
+
 $control = $_GET['controll'] ?? false;
 $id = $_GET['id'] ?? false;
 
