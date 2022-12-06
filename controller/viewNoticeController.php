@@ -3,9 +3,8 @@
 require('model/connection.php');
 require('model/viewNoticeModel.php');
 
-
-  $obj = new Connection;
-  $objConection = $obj->setConnect();
+$obj = new Connection;
+$objConection = $obj->setConnect();
 
 $objA = new view;
 $objB = new view;

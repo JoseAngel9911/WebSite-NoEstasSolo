@@ -1,6 +1,5 @@
 <?php 
 
-
 class view{
 
     public function order($objConnection,$id){
