@@ -1,7 +1,7 @@
 <?php 
 
-require('../model/connection.php');
-require('../model/viewNoticeModel.php');
+require('model/connection.php');
+require('model/viewNoticeModel.php');
 
 
   $obj = new Connection;

@@ -6,7 +6,7 @@
     $objCrud = new CrudNotice;
     $data = ($objCrud->lastRegister())->fetch_assoc();
 
-    $lastID = $data['id'];
+    $lastID = $data['id_Article'];
     $newID;
     $newName;
 

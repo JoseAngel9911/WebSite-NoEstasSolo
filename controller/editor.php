@@ -6,6 +6,7 @@
     class Editor extends Users{
 
         public function addNotice($titleP,$contentP,$dateNoticeP,$autorP,$tagP,$imageRuteP){
+            
             $objNotice = new Notice($titleP,$contentP,$dateNoticeP,$autorP,$tagP,$imageRuteP);
 
             $objCrud = new CrudNotice;

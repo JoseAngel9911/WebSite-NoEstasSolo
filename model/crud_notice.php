@@ -4,6 +4,7 @@
     class CrudNotice{
 
         public function insertNotice($objNoticeP){
+
             $sCrud = "INSERT INTO register_article (title, type_a, users, date_register, article_content, image_rute) VALUES ('". 
             $objNoticeP->title."',".$objNoticeP->tag.",".$objNoticeP->autor.",'".$objNoticeP->dateNotice."','".$objNoticeP->content."','".$objNoticeP->imageRute."')";
         
@@ -24,7 +25,7 @@
 
         public function lastRegister(){
 
-            $sCrud = "SELECT MAX(id) AS id FROM register_article";
+            $sCrud = "SELECT MAX(id_Article) AS id_Article FROM register_article";
             $objConnect = $this->generatedConnection();
 
             if($objConnect){

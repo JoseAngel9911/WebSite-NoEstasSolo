@@ -40,7 +40,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Escritor</title>
     <link rel="stylesheet" href="../css/styleWriter.css" />
-    <link rel="stylesheet" type="text/css" href="../css/loading.css">
+    <link rel="stylesheet" href="../css/loading.css" />
    
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
@@ -86,12 +86,7 @@
                         
                         <textarea name="content" id="editor"  ></textarea>
         
-                       
-                        
-        <script src="https://cdn.ckeditor.com/ckeditor5/35.3.2/super-build/ckeditor.js"></script>
-        
-        
-        
+                        <script src="https://cdn.ckeditor.com/ckeditor5/35.3.2/super-build/ckeditor.js"></script>
 
                     <div id="bt1" >
                         <input type="file" id="article_pic" name="article_imagen" accept=".png , .jpg">
@@ -124,7 +119,8 @@
     width: 1000px;
 }
 </style>
-<script src="../js/loader.js"></script> 
-<script src="../js/ckedit.js"></script> 
+<script src="../js/ckedit.js"></script>
+<script src="../js/loader.js"></script>
+
 </body>
 </html>

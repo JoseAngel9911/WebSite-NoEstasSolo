@@ -3,7 +3,7 @@
     
     session_start();
     
-    if(isset($_POST['subir']) && $_POST['subir'] == 'Subir'){
+    if(isset($_POST['subir']) && $_POST['subir'] == 'Guardar'){
 
         require 'image_function.php';
 
