@@ -1,10 +1,14 @@
 <?php 
-
-require('model/connection.php');
 require('model/viewNoticeModel.php');
+require('model/connection.php');
 
 $obj = new Connection;
 $objConection = $obj->setConnect();
+
+$objL = new view;
+
+
+$fetch=$objL->llist($objConection);
 
 $objA = new view;
 $objB = new view;
@@ -12,11 +16,13 @@ $objC = new view;
 $objD = new view;
 $objE = new view;
 
-$result1=$objA->order($objConection, 16);
-$result2=$objB->order($objConection, 4);
-$result3=$objC->order($objConection, 21);
-$result4=$objD->order($objConection, 20);
-$result5=$objE->order($objConection, 19);
+
+
+$result1=$objA->order($objConection, $fetch->num_rows);
+$result2=$objB->order($objConection, $fetch->num_rows-1);
+$result3=$objC->order($objConection, $fetch->num_rows-2);
+$result4=$objD->order($objConection, $fetch->num_rows-3);
+$result5=$objE->order($objConection, $fetch->num_rows-4);
 
 
 

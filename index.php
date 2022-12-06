@@ -43,6 +43,7 @@
 
           <div class="article-body">
             <h2 class="article-title">
+              
             <?php echo $row1['title']; ?>
             </h2>
            
