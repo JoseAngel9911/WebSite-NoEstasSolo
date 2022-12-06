@@ -5,8 +5,7 @@ require('../../model/editModel.php');
 $obj = new Connection;
 $objConection = $obj->setConnect();
 $objEdit = new edit;
-$id=false;
-$result=$objEdit->list($objConection, $id);
+$result=$objEdit->list($objConection, $id=false);
 
 
 ?>
