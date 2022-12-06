@@ -1,11 +1,14 @@
 <?php 
+require('model/viewNoticeModel.php');
+require('model/connection.php');
 
-require('../model/connection.php');
-require('../model/viewNoticeModel.php');
+$obj = new Connection;
+$objConection = $obj->setConnect();
+
+$objL = new view;
 
 
-  $obj = new Connection;
-  $objConection = $obj->setConnect();
+$fetch=$objL->llist($objConection);
 
 $objL = new view;
 
