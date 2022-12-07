@@ -18,7 +18,7 @@
     <!-- Header -->
     <header class="page-header">
         <nav>
-            <a href="index.html"><img class="logo" src="view/images/logo-1.jpg" alt="logo"></a>
+            <a href="index.html"><img class="logo" src="view/images/logo-1.png" alt="logo"></a>
           <ul>
             <li class="item"><a href="index.php">Inicio</a></li>
             <li class="item"><a href="view/publicview/about.php">¿Quiénes somos?</a></li>

@@ -31,7 +31,9 @@
       <section id="content-wrap" class="blog-single">
   
         <div >
-          <img src="<?php echo $row['image_rute'];?>" height="300px" width="940px"> 
+          <img src="<?php $rute = '../images/article/' . $row['image_rute'];
+            echo $rute;
+          ?>" height="300px" width="940px"> 
         </div>
         
         <div class="row">
