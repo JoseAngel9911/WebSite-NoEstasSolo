@@ -13,6 +13,8 @@ class edit
 
         $this->connect();
 
+      
+
         if($id){
 
             $query = "SELECT id_Article, title, name_user, type_Article,date_register, article_content, image_rute FROM register_article AS r

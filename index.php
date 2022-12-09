@@ -1,5 +1,5 @@
 <?php 
- require('controller/viewNoticeController.php');
+  require('controller/viewNoticeCcontroller.php');
 ?>
 
 
@@ -38,7 +38,9 @@
       <a class='article first-article' href="view/publicview/report.php?id=<?php echo $row1['id_Article'];?>"> 
           
       <figure class="article-image is-4by3">
-            <img src="./view/images/image1.png" alt="">
+
+            <img src="" alt="">
+
         </figure>
 
           <div class="article-body">
@@ -71,7 +73,7 @@
                 </h2>
 
                 <p>
-                <?php echo $row2['article_content']; ?>
+                
                 </p>
                 <footer class="article-info">
                   <span><?php echo $row2['name_user'];?></span>
@@ -97,7 +99,8 @@
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 </p>
                 <footer class="article-info">
-                  <span><?php echo $row2['name_user'];?></span>
+                  <span><?php echo $row3['name_user'];?></span>
+                  <span><?php echo $row3['date_register'];?></span>
                 </footer>
               </div>
             </a>
@@ -114,6 +117,7 @@
                 </p>
                 <footer class="article-info">
                   <span><?php echo $row4['name_user'];?></span>
+                  <span><?php echo $row4['date_register'];?></span>
 
                 </footer>
               </div>
@@ -131,7 +135,8 @@
                   Lorem ipsum dolor sit amet feugiat facilisis.
                 </p>
                 <footer class="article-info">
-                  <span><?php echo $row2['name_user'];?></span>
+                  <span><?php echo $row5['name_user'];?></span>
+                  <span><?php echo $row5['date_register'];?></span>
 
                 </footer>
               </div>
@@ -146,69 +151,80 @@
 
 
 
-        <a class="article" href="#">
+      <a class='article first-article' href="view/publicview/report.php?id=<?php echo $rowA['id_Article'];?>"> 
           <figure class="article-image is-3by2">
             <img src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/1366/posts/26611/attachment/image-04.png" alt="">
           </figure>
           <div class="article-body">
             <h2 class="article-title">
-              Hello World
+
+            <?php echo $rowA['title'];?>
+        
             </h2>
             <p class="article-content">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+            <?php echo $rowA['article_content'];?>
+            
             </p>
             <footer class="article-info">
-              <span>By Joe Smith</span>
+            <span> <?php echo $rowA['name_user']; ?></span>
+              <span> <?php echo $rowA['date_register'];  ?></span>
+            </footer>
+          </div>
+        </a>
+
+
+        <a class='article first-article' href="view/publicview/report.php?id=<?php echo $rowB['id_Article'];?>"> 
+          <div class="article-body">
+            <h2 class="article-title">
+            <?php echo $rowB['title'];?>
+            </h2>
+            <p class="article-content">
+                  
+            <?php echo $rowB['article_content'];?>
+
+            </p>
+            <footer class="article-info">
+            <span> <?php echo $rowB['name_user']; ?></span>
+              <span> <?php echo $rowB['date_register'];  ?></span>
+            </footer>
+          </div>
+        </a>
+
+        <a class='article first-article' href="view/publicview/report.php?id=<?php echo $rowC['id_Article'];?>"> 
+          <div class="article-body">
+            <h2 class="article-title">
+            <?php echo $rowC['title'];?>
+            </h2>
+            <p class="article-content">
+            <?php echo $rowC['article_content'];?>
+            </p>
+            <footer class="article-info">
+
+            <span> <?php echo $rowC['name_user']; ?></span>
+              <span> <?php echo $rowC['date_register'];  ?></span>
+
             </footer>
           </div>
 
 
 
         </a>
-        <a class="article" href="#">
+
+        
+        <a class='article first-article' href="view/publicview/report.php?id=<?php echo $rowD['id_Article'];?>"> 
           <div class="article-body">
             <h2 class="article-title">
-              Hello World
+            <?php echo $rowD['title'];?>
             </h2>
             <p class="article-content">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            <?php echo $rowD['article_content'];?>
             </p>
             <footer class="article-info">
-              <span>By Joe Smith</span>
-            </footer>
-          </div>
 
+            <span> <?php echo $rowD['name_user']; ?></span>
+              <span> <?php echo $rowD['date_register'];  ?></span>
 
-
-        </a>
-        <a class="article" href="#">
-          <div class="article-body">
-            <h2 class="article-title">
-              Hello World
-            </h2>
-            <p class="article-content">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </p>
-            <footer class="article-info">
-              <span>By Joe Smith</span>
-            </footer>
-          </div>
-
-
-
-        </a>
-        <a class="article" href="#">
-          <div class="article-body">
-            <h2 class="article-title">
-              Hello World
-            </h2>
-            <p class="article-content">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </p>
-            <footer class="article-info">
-              <span>By Joe Smith</span>
             </footer>
           </div>
         </a>

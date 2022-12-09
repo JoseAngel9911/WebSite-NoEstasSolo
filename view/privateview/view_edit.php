@@ -44,7 +44,10 @@ function messageInsert($responseP)
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Escritor</title>
 
-    <script src="../../implements/ckeditor5/ckeditor.js"></script>
+
+	
+
+
     <link href="../css/edit.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="../css/loading.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
@@ -72,9 +75,10 @@ function messageInsert($responseP)
 
         <h1>Editar Noticia</h1>
 
+
         <label>Autor: </label> <label><?php echo $_SESSION['userName'] ?></label>
 
-        <table>
+        <table id="table1">
             <thead>
                 <tr>
                     <td>autor</td>
@@ -94,12 +98,11 @@ function messageInsert($responseP)
                             <td><?php echo $row['title']; ?></td>
                             <td><?php echo  $row['type_Article']; ?></td>
                             <td><?php echo  $row['date_register']; ?></td>
-                            <td> <?php echo "<a href='edit_view.php?id=$row[id_Article]&controll=true'>Editar</a>"; ?></td>
+                           
+                            <td > <?php echo "<a href='edit_view.php?id=$row[id_Article]&controll=true'>Editar</a>"; ?></td>
                             <style>
                                 #link:hover {
-
                                     background-color: cadetblue;
-
                                 }
                             </style>
                 </tr>
@@ -110,8 +113,11 @@ function messageInsert($responseP)
 
     </section>
 
+
+
     <script src="../js/loader.js"></script> 
 <script src="../js/ckedit.js"></script>
+<script src="../../DataTables/datatables.min.js"></script>
 </body>
 
 </html>

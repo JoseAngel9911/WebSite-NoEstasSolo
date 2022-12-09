@@ -2,7 +2,7 @@
 
     $host = 'localhost';
     $user = 'root';
-    $pass = 'Borquez3535';
+    $pass = '';
     $bdname = 'nesolocl_website';
 
 ?>
