@@ -6,6 +6,7 @@ $objC = new view;
 $fetch2 = $objC->llist($objConection, 'Aviso');
 
 $num2 = $fetch2->fetch_assoc();
+
 $id2 = (int) $num2['id'];
 
 $avisoA = new view;
@@ -28,8 +29,8 @@ $rowB = $resultB2->fetch_assoc();
 $rowC = $resultC3->fetch_assoc();
 $rowD = $resultD4->fetch_assoc();
 
-
-while (true) {
+$n2=0;
+while ($n2<=$id2) {
 
     if (!$rowA) {
 
@@ -38,7 +39,7 @@ while (true) {
         $nmC = $nmC + 1;
         $nmD = $nmD + 1;
 
-        $resultA1 = $avisoA->order($objConection, $id2, 'Aviso');
+        $resultA1 = $avisoA->order($objConection, $id2 - $nmA, 'Aviso');
         $resultB2 = $avisoB->order($objConection, $id2 - $nmB, 'Aviso');
         $resultC3 = $avisoC->order($objConection, $id2 - $nmC, 'Aviso');
         $resultD4 = $avisoD->order($objConection, $id2 - $nmD, 'Aviso');
@@ -84,5 +85,7 @@ while (true) {
         break;
 
     }
+
+    $n2+=1;
 
 }

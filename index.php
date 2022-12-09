@@ -211,6 +211,8 @@
 
         </a>
 
+
+     
         
         <a class='article first-article' href="view/publicview/report.php?id=<?php echo $rowD['id_Article'];?>"> 
           <div class="article-body">
@@ -223,7 +225,8 @@
             <footer class="article-info">
 
             <span> <?php echo $rowD['name_user']; ?></span>
-              <span> <?php echo $rowD['date_register'];  ?></span>
+              <span> <?php echo $rowD['date_register']; ?></span>
+            
 
             </footer>
           </div>
