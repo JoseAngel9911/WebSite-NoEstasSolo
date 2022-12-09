@@ -94,7 +94,9 @@ function messageInsert($responseP)
 
                         <div id="sexo" style="background-color:black ;">
 
-                            <td><?php echo $row['name_user']; ?></td>
+                            <td><?php $nameEditor = $row['name_user'] . ' ' . $row['lastname_user'];
+                                echo $nameEditor;
+                            ?></td>
                             <td><?php echo $row['title']; ?></td>
                             <td><?php echo  $row['type_Article']; ?></td>
                             <td><?php echo  $row['date_register']; ?></td>

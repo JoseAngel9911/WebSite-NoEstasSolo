@@ -17,8 +17,8 @@ class edit
 
         if($id){
 
-            $query = "SELECT id_Article, title, name_user, type_Article,date_register, article_content, image_rute FROM register_article AS r
-            JOIN users AS u  ON r.type_a = u.id
+            $query = "SELECT id_Article, title, name_user, lastname_user, type_Article,date_register, article_content, image_rute FROM register_article AS r
+            JOIN users AS u  ON r.users = u.id
             JOIN type_article AS t  ON r.type_a = t.id_type WHERE id_article = '$id'";
            
            $result = $this->objConection->query($query);
@@ -26,8 +26,8 @@ class edit
         }
         else{
 
-            $query = "SELECT id_Article, title, name_user, type_Article,date_register, article_content FROM register_article AS r
-            JOIN users AS u  ON r.type_a = u.id
+            $query = "SELECT id_Article, title, name_user, lastname_user, type_Article,date_register, article_content FROM register_article AS r
+            JOIN users AS u  ON r.users = u.id
             JOIN type_article AS t  ON r.type_a = t.id_type";
 
             $result = $this->objConection->query($query);
