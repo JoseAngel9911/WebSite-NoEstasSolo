@@ -44,10 +44,8 @@ function messageInsert($responseP)
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Escritor</title>
 
-
-	
-
-
+   
+   
     <link href="../css/edit.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="../css/loading.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
@@ -94,9 +92,7 @@ function messageInsert($responseP)
 
                         <div id="sexo" style="background-color:black ;">
 
-                            <td><?php $nameEditor = $row['name_user'] . ' ' . $row['lastname_user'];
-                                echo $nameEditor;
-                            ?></td>
+                            <td><?php echo $row['name_user']; ?></td>
                             <td><?php echo $row['title']; ?></td>
                             <td><?php echo  $row['type_Article']; ?></td>
                             <td><?php echo  $row['date_register']; ?></td>
@@ -112,9 +108,6 @@ function messageInsert($responseP)
 
         <?php } ?>
         </table>
-
-    </section>
-
 
 
     <script src="../js/loader.js"></script> 

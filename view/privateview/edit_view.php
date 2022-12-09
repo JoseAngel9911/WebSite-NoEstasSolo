@@ -53,6 +53,7 @@ $content = $row['article_content'];
                 <option value="1">Noticia</option>
                 <option value="2">Aviso</option>
             </select>
+          
 
             <input name="id" <?php echo "value=$id"; ?> type="hidden">
             <input type="submit" value="ACTUALIZAR">

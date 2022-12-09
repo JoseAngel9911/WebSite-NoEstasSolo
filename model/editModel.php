@@ -53,14 +53,12 @@ class edit
                 $obj = new Connection;
                 $objConection = $obj->setConnect();
            
-                $query = "UPDATE register_article SET title = '$titulo', article_content = '$editor', type_a = $articulo, date_register = '$fechaActualizada' WHERE id_article= '$id'";
+                $query = "UPDATE register_article SET id_Article = (SELECT MAX(id_Article)+1 AS id FROM register_article), title = '$titulo', article_content = '$editor', type_a = $articulo, date_register = '$fechaActualizada' WHERE id_article= '$id'";
                 $result= $objConection->query($query);
 
                 return $result;
-            
+
     }
-
-
     public function inner($id){
 
        
